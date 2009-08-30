@@ -41,17 +41,12 @@ return {
 	--background_color = LrColor( "white" ),
 	
 	exportPresetFields = {
-		{ key = 'privacy', default = 'public' },
-		{ key = 'privacy_family', default = false },
-		{ key = 'privacy_friends', default = false },
-		{ key = 'safety', default = 'safe' },
-		{ key = 'hideFromPublic', default = false },
-		{ key = 'type', default = 'photo' },
-		{ key = 'autoDate', default = '2' },
+		{ key = 'autoDate', default = '1' },
 		{ key = 'allowComments', default = 'A' },
-		-- { key = 'photoset', default = 'now' },
 		{ key = 'addTags', default = '' },
 		{ key = 'addCategories', default = '' },
+		{ key = 'postKey', default = '' },
+		{ key = 'uploadURL', default = 'http://example.com/admin/pp_upload.php' },
 	},
 
 	startDialog = PixelpostExportDialogSections.startDialog,

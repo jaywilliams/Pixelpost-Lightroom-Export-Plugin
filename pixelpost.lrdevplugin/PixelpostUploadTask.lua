@@ -203,16 +203,7 @@ function PixelpostUploadTask.processRenderedPhotos( functionContext, exportConte
 			
 			-- local tags
 			
-
-			
-		
-			
-			local is_public = privacyToNumber[ exportParams.privacy ]
-			local is_friend = booleanToNumber( exportParams.privacy_friends )
-			local is_family = booleanToNumber( exportParams.privacy_family )
-			local safety_level = safetyToNumber[ exportParams.safety ]
 			local content_type = contentTypeToNumber[ exportParams.contentType ]
-			local hidden = exportParams.hideFromPublic and 2 or 1
 			local categories = exportParams.addCategories
 			local autoDate = exportParams.autoDate
 			local allowComments = exportParams.allowComments
@@ -238,7 +229,6 @@ function PixelpostUploadTask.processRenderedPhotos( functionContext, exportConte
 				error "TO DO: Not yet ready to replace existing photos on Pixelpost."
 			
 			else
-			 
 				pixelpostPhotoId = PixelpostAPI.uploadPhoto{
 										filePath = pathOrMessage,
 										title = title,
@@ -247,12 +237,6 @@ function PixelpostUploadTask.processRenderedPhotos( functionContext, exportConte
 										categories = categories,
 										autodate = autoDate,
 										allow_comments = allowComments,
-										-- is_public = is_public,
-										-- is_friend = is_friend,
-										-- is_family = is_family,
-										-- safety_level = safety_level,
-										content_type = content_type,
--- > 										hidden = hidden,
 									}
 				
 				-- TO DO: Delete the individual photo file after completion.

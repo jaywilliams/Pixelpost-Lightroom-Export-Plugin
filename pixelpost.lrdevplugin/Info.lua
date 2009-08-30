@@ -19,10 +19,11 @@ of it requires the prior written permission of Adobe.
 
 return {
 
-	LrSdkVersion = 1.3,
-	LrSdkMinimumVersion = 1.3, -- minimum SDK version required by this plugin
+	LrSdkVersion = 2.0,
+	LrSdkMinimumVersion = 2.0, -- minimum SDK version required by this plugin
 
 	LrToolkitIdentifier = 'org.pixelpost.lightroom.export.pixelpost',
+	LrPluginName = LOC "$$$/Pixelpost/Pixelpost=Pixelpost",
 	
 	-- LrLibraryMenuItems = {
 	-- 	title = LOC "$$$/Pixelpost/ExportUsingDefaults=Export to Pixelpost Using Defaults",
@@ -47,5 +48,7 @@ return {
 		file = 'PixelpostExportServiceProvider.lua',
 		builtInPresetsDir = "presets",
 	},
+	
+	VERSION = { major=2, minor=0, revision=0, build=2, },
 
 }

@@ -1,7 +1,16 @@
-Adobe Photoshop Lightroom Export Plugin v1.0 Beta 2
+Adobe Photoshop Lightroom Export Plugin v2.0 Beta 2
 
-	Compatible with: Pixelpost v1.7.1
+	Compatible with: Pixelpost v1.7.1 & Lightroom 2
 	Created by: Jay Williams <jay@myd3.com>
+	Updated by: Richard Taylor <pixelpost@richardtaylor.info>
+
+Upgrade Instructions:
+
+	1. Replace the old Lightroom plugin (pixelpost.lrdevplugin) with the new one included in this package.
+	
+	2. You're Done!
+	
+		You don't need to change or re-upload Pixelpost addon files, as they haven't been changed.
 
 Installation Instructions:
 
@@ -29,7 +38,7 @@ Installation Instructions:
 	
 	9. Choose 'Export to Pixelpost' from the list on the left
 	
-	10. Press the 'Enter Key' button, and copy/paste the Post Key & Upload URL from the Addons page into the appropriate box and press OK.
+	10. Copy/paste the Post Key & Upload URL from the Addons page into the appropriate box.
 
 	Enjoy!
 
@@ -53,4 +62,8 @@ Lightroom Metadata Cross Reference:
 	Keyword Tags = Pixelpost Tags
 	
 	Other options such as: categories, publish date, and comment settings can be adjusted in the Export window.
+	
+A Notice to Lightroom 1 Notes:
+	
+	Lightroom 1 users should use v1.0.2, as v2.x only works with Lightroom 2
 	
