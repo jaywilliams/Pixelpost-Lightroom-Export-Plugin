@@ -1,4 +1,4 @@
-Adobe Photoshop Lightroom Export Plugin v1.0 Beta 1
+Adobe Photoshop Lightroom Export Plugin v1.0 Beta 2
 
 	Compatible with: Pixelpost v1.7.1
 	Created by: Jay Williams <jay@myd3.com>
@@ -22,6 +22,14 @@ Installation Instructions:
 	5. Login to your Pixelpost Admin, and go to the 'Addons' Page.
 
 	6. Turn the Addon 'External App Upload' ON.
+	
+	7. Copy the listed Upload URL & Post Key from the Addons page
+	
+	8. Open up Lightroom, go to File > Export
+	
+	9. Choose 'Export to Pixelpost' from the list on the left
+	
+	10. Press the 'Enter Key' button, and copy/paste the Post Key & Upload URL from the Addons page into the appropriate box and press OK.
 
 	Enjoy!
 

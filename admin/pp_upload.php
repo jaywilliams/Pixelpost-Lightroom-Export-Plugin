@@ -1,7 +1,7 @@
 <?php
 
 
-// EXTERNAL APP UPLOAD v2
+// EXTERNAL APP UPLOAD v2.1
 // For use with the Pixelpost Uploader & Lightroom Plugin
 // Created by: Jay Williams <myd3.com>
 
@@ -16,7 +16,7 @@
 define("POSTKEY", "ChangeMe");
 
 /**
- * When you enter categories, you can have have the application automatically create 
+ * When you enter categories, you can have the application automatically create 
  * new categories if the one you entered does not exist.  To enable this feature,
  * change the text from false to true.
  **/
@@ -109,13 +109,13 @@ $_FILES['userfile'] = $_FILES['photo'];
 // $_POST['body'] = urldecode($_POST['body']);
 
 
-if($_POST['autodate'] == "Post one day after last post"){
-	$_POST['autodate'] = 1; // Post one day after last post
-}else if($_POST['autodate'] == "Use exif date"){
-	$_POST['autodate'] = 3; // Use exif date
-}else{
-	$_POST['autodate'] = 2; // Post Now
-}
+// if($_POST['autodate'] == "Post one day after last post"){
+// 	$_POST['autodate'] = 1; // Post one day after last post
+// }else if($_POST['autodate'] == "Use exif date"){
+// 	$_POST['autodate'] = 3; // Use exif date
+// }else{
+// 	$_POST['autodate'] = 2; // Post Now
+// }
 
 // Hack to get adons to work
 $_GET['view'] = '';

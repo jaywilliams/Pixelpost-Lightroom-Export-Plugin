@@ -264,8 +264,8 @@ function PixelpostExportDialogSections.sectionsForBottomOfDialog( f, propertyTab
 					items = {
 						-- TO DO: Should really be populated from live data. ;-)
 						{ title = "Post Now", value = '2' },
-						{ title = "Post one day after last post", value = '1' },
-						{ title = "Use exif date", value = '3' },
+						{ title = "Post One Day After Last Post", value = '1' },
+						{ title = "Use EXIF Date", value = '3' },
 					},
 				},
 --[[
@@ -346,7 +346,7 @@ function PixelpostExportDialogSections.sectionsForBottomOfDialog( f, propertyTab
 			-- enabled = bind 'addToPhotoset',
 			items = {
 				-- TO DO: Should really be populated from live data. ;-)
-				{ title = "Publish Instanty", value = 'A' },
+				{ title = "Publish Instantly", value = 'A' },
 				{ title = "To Moderation Que", value = 'M' },
 				{ title = "Disable Commenting", value = 'F' },
 			},

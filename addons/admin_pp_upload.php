@@ -55,7 +55,7 @@ $pp_pp_upload_status
 
 <p>Created by Jay Williams (<a href=\"http://myd3.com/\">myd3.com</a>)</p>
 ";
-$addon_version = "2.0";
+$addon_version = "2.1";
 
 add_admin_functions('categories_header','admin_html_head','','');
 // your function to show a new page under a submenu in admin panel
