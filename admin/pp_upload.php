@@ -21,8 +21,21 @@ define("POSTKEY", "40B68D78FC42AE9FCFC067FBDC80FDF059B493C33617B896C54AD8A93A080
  **/
 define("CREATECAT", false);
 
-$UseGoogleMapAddon = true;
-$UseFTPpermissions = true;
+/**
+ * If you use Lightroom to geocode your images (e.g. use the Jeffrey’s "GPS-Support" Geoencoding 
+ * Plugin for Lightroom, found at http://regex.info/blog/lightroom-goodies/gps) and if you use the
+ * Googlemap addon, you can update the location at your photoblog while performing the export. 
+ * To enable this feature, change the text from false to true.
+ **/
+define("USEGOOGLEMAPADDON", true);
+
+/**
+ * The FTPPermissions addon adds additional security for blogs that need the images and 
+ * thumbnails folder to be CHMOD 0777 while uploading. In order to open up the folders so
+ * the plugin can write the image you need to provide the FTP password in the export dialog and 
+ * enable the feature by changing the text from false to true.
+ **/
+define("USEFTPPERMISSIONSADDON", true);
 
 ////////// DO NOT EDIT BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING! //////////
 
@@ -69,7 +82,7 @@ if (!isset($_GET['view']))
 	$_POST['body'] = $_POST['description'];
 	//$_POST['tags'] = trim($_POST['tags'],', ');
 	$_POST['tags'] = null;
-	if ($UseFTPpermissions==true)
+	if (USEFTPPERMISSIONSADDON==true)
 		$_POST['ftp_password_permissions'] = $_POST['ftppassword'];
 	$_FILES['userfile'] = $_FILES['photo'];
 
@@ -309,7 +322,7 @@ if (!isset($_GET['view']))
 			$theid = mysql_insert_id(); //Gets the id of the last added image to use in the next "insert"
 
 				// GPS
-				if ($UseGoogleMapAddon == true)
+				if (USEGOOGLEMAPADDON == true)
 				{
 					// since we all ready escaped everything for database commit we have
 					// strip the slashes before we can use the exif again.
