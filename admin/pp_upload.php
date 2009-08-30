@@ -22,6 +22,18 @@ define("POSTKEY", "40B68D78FC42AE9FCFC067FBDC80FDF059B493C33617B896C54AD8A93A080
 define("CREATECAT", false);
 
 /**
+ * If this is set to "true", Pixelpost will import the tags from Lightroom. 
+ * If you don't want this, simply set it to "false".
+ */
+define("ENABLE_TAGS", true);
+
+/**
+ * Pixelpost treats spaces in tags as separate tags, Lightroom however only sees commas as a tag separator.
+ * If this is enabled, all tags from Lightroom with spaces in them will have underscores replacing the spaces.
+ */
+define("FIX_SPACES", true);
+
+/**
  * If you use Lightroom to geocode your images (e.g. use the Jeffrey’s "GPS-Support" Geoencoding 
  * Plugin for Lightroom, found at http://regex.info/blog/lightroom-goodies/gps) and if you use the
  * Googlemap addon, you can update the location at your photoblog while performing the export. 
@@ -80,10 +92,28 @@ if (!isset($_GET['view']))
 	// Translate to Pixelpost format:
 	$_POST['headline'] = $_POST['title'];
 	$_POST['body'] = $_POST['description'];
-	//$_POST['tags'] = trim($_POST['tags'],', ');
-	$_POST['tags'] = null;
-	if (USEFTPPERMISSIONSADDON==true)
+	
+	/**
+	 * If tags are disabled, we can remove them from the post.
+	 */
+	if (!ENABLE_TAGS) {
+		$_POST['tags'] = '';
+	}
+	
+	
+	$_POST['tags'] = trim($_POST['tags'],', ');
+	
+	/**
+	 * Replace any spaces in tags with underscores, to maintain the full LR names:
+	 */
+	if (FIX_SPACES) {
+		$_POST['tags'] = str_replace(array(' ','_,',',_'),array('_',',',','),$_POST['tags']);
+	}
+
+	if (USEFTPPERMISSIONSADDON){
 		$_POST['ftp_password_permissions'] = $_POST['ftppassword'];
+	}
+	
 	$_FILES['userfile'] = $_FILES['photo'];
 
 	// Hack to get adons to work
@@ -322,7 +352,7 @@ if (!isset($_GET['view']))
 			$theid = mysql_insert_id(); //Gets the id of the last added image to use in the next "insert"
 
 				// GPS
-				if (USEGOOGLEMAPADDON == true)
+				if (USEGOOGLEMAPADDON)
 				{
 					// since we all ready escaped everything for database commit we have
 					// strip the slashes before we can use the exif again.
