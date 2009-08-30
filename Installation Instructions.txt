@@ -1,0 +1,48 @@
+Adobe Photoshop Lightroom Export Plugin v1.0 Beta 1
+
+	Compatible with: Pixelpost v1.7.1
+	Created by: Jay Williams <jay@myd3.com>
+
+Installation Instructions:
+
+	1. Open the file 'pp_upload.php' and specify a Post Key.
+
+	2. Copy the file 'pp_upload.php' to the 'admin' folder in your Pixelpost installation.
+	
+	3. Copy the file 'admin_pp_upload.php' to the 'addons' folder in your Pixelpost installation.
+
+	4. Copy the folder 'pixelpost.lrdevplugin' to the proper location:
+
+		MAC: ~/Library/Application Support/Adobe/Lightroom/Modules/
+		WINDOWS XP: C:\Documents and Settings\{your_username}\Application Data\Adobe\Lightroom\Modules\
+		WINDOWS VISTA: C:\Users\{your_username}\AppData\Roaming\Adobe\Lightroom\Modules\
+	
+		If the 'Modules' folder doesn't exist, you will need to create it manually.
+
+	5. Login to your Pixelpost Admin, and go to the 'Addons' Page.
+
+	6. Turn the Addon 'External App Upload' ON.
+
+	Enjoy!
+
+Plugin Features:
+
+	* Single click export to Pixelpost from Lightroom
+
+	* Export multiple images at once
+	
+	* Reads XMP & EXIF metadata (see cross reference)
+	
+	* Create custom export presets
+	
+	* Plus all built in Lightroom Export features, such as image resizing and watermarking
+
+
+Lightroom Metadata Cross Reference:
+
+	Title = Pixelpost Image Title
+	Caption = Pixelpost Image Description
+	Keyword Tags = Pixelpost Tags
+	
+	Other options such as: categories, publish date, and comment settings can be adjusted in the Export window.
+	

@@ -1,0 +1,6 @@
+"$$$/Pixelpost/ExportDialog/Account=Pixelpost Account"
+"$$$/Pixelpost/ExportDialog/PrivacyAndSafety=Privacy and Safety"
+"$$$/Pixelpost/ExportDialog/Organize=Batch Publish Options"
+"$$$/Pixelpost/ExportUsingDefaults=Export to Pixelpost Using Defaults"
+"$$$/Pixelpost/EnterAPIKey=Enter Pixelpost Post Key..."
+"$$$/Pixelpost/Pixelpost=Pixelpost"
