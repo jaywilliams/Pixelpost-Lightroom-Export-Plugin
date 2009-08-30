@@ -45,6 +45,7 @@ return {
 		{ key = 'allowComments', default = 'A' },
 		{ key = 'addTags', default = '' },
 		{ key = 'addCategories', default = '' },
+		{ key = 'ftpPassword', default = '' },
 		{ key = 'postKey', default = '' },
 		{ key = 'uploadURL', default = 'http://example.com/admin/pp_upload.php' },
 	},

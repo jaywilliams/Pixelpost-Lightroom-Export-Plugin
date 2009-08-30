@@ -12,6 +12,7 @@ s = {
 		minimizeEmbeddedMetadata = false,
 		["org.pixelpost.lightroom.export.pixelpost_addCategories"] = "",
 		["org.pixelpost.lightroom.export.pixelpost_addTags"] = "",
+		["org.pixelpost.lightroom.export.pixelpost_ftpPassword"] = "",
 		["org.pixelpost.lightroom.export.pixelpost_allowComments"] = "A",
 		["org.pixelpost.lightroom.export.pixelpost_autoDate"] = "2",
 		-- ["org.pixelpost.lightroom.export.pixelpost_postKey"] = "",
