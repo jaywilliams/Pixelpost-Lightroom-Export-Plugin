@@ -109,7 +109,7 @@ function PixelpostExportDialogSections.sectionsForBottomOfDialog( f, propertyTab
 					items = {
 						-- TO DO: Should really be populated from live data. ;-)
 						{ title = "Post Now", value = '2' },
-						{ title = "Post One Day After Last Post", value = '1' },
+						{ title = "Post Three Days After Last Post", value = '1' },
 						{ title = "Use EXIF Date", value = '3' },
 					},
 				},
@@ -190,6 +190,34 @@ function PixelpostExportDialogSections.sectionsForBottomOfDialog( f, propertyTab
 			},
 		},		
 			},	
+		
+			-- Categories:
+			
+			f:row {
+				f:static_text {
+					title = LOC "$$$/Pixelpost/ExportDialog/ftpPassword=FTP password:",
+					alignment = 'right',
+					width = share 'labelWidth',
+				},
+
+				f:password_field {
+					value = bind 'ftpPassword',
+					fill_horizontal = 1,
+				},
+			},
+
+			f:row {
+				f:spacer {
+					width = share 'labelWidth',
+				},
+
+				f:static_text {
+					title = LOC "$$$/Pixelpost/ExportDialog/FTPNote=When using the \"FTP_permissions Addon\", which changes the CHMOD settings of the image and thumbnails folder, you need to supply the FTP password.",
+					fill_horizontal = 1,
+					height_in_lines = 2,
+					width_in_chars = 32,
+				},
+			},
 		
 		},
 

@@ -37,7 +37,7 @@ local share = LrView.share
 local logger = import 'LrLogger'( 'PixelpostAPI' )
 
 -- Commment this out if you want log files disabled:
--- logger:enable('logfile')
+logger:enable('logfile')
 
 local debug, info, warn, err = logger:quick( 'debug', 'info', 'warn', 'err' )
 
@@ -358,6 +358,10 @@ function PixelpostAPI.uploadPhoto( params )
 	-- local params.photo_id = uploadURL
 
 	info( 'uploading photo', params.filePath )
+	info( 'password', params.ftppassword )
+	info( 'autoDate', params.autodate )
+	info( 'postKey', postKey )
+	info( 'uploadURL', uploadURL )
 
 	local filePath = assert( params.filePath )
 	params.filePath = nil
@@ -381,6 +385,7 @@ function PixelpostAPI.uploadPhoto( params )
 	for argName, argValue in pairs( params ) do
 		if argName ~= 'post_key_hash' then
 			mimeChunks[ #mimeChunks + 1 ] = { name = argName, value = argValue }
+			info( argName, argValue )
 		end
 	end
 
@@ -394,8 +399,7 @@ function PixelpostAPI.uploadPhoto( params )
 	local post_url = string.format( '%s?post_key_hash=%s&mode=upload',
 						uploadURL, post_key_hash )
 	
-	
-	-- info( 'post_url: ' .. post_url )
+	info( 'post_url: ' .. post_url )
 	-- info( 'uploadURL: ' ..  uploadURL )
 	
 	local result = LrHttp.postMultipart( post_url , mimeChunks )
